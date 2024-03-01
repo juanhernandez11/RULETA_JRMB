@@ -1,0 +1,47 @@
+<div class="ruleta-container">
+    <h1>Ruleta Angular</h1>
+    <button [disabled]="girando" (click)="girarRuleta()">Girar</button>
+    <div id="ruleta" [style.transform]="'rotate(' + rotacion + 'deg)'">
+        <div id="sectores">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="divisores">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="caras">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="triangulo"></div>
+
+    <div class="ruleta" [class.girando]="girando">
+        <div class="flecha"></div>
+        <div class="segundero"></div>
+    </div>
+
+    <div *ngIf="mostrarNumeroGanador">
+        <h2><span>Número ganador:{{ numeroGanador }}</span></h2>
+    </div>
+</div>
